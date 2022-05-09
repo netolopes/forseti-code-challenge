@@ -53,7 +53,9 @@ class NoticiasController extends Controller
 
     public function details(Request $request){
 
-            $url = (isset($_GET['link'])) ? $_GET['link'] : '';
+           // $url = (isset($_GET['link'])) ? $_GET['link'] : '';
+            $requestContent = $request->all();
+            $url = $requestContent['link'];
 
             $urlPrincipal=$url;
 
