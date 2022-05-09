@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/news', [NoticiasController::class,'index']);
+Route::get('/details', [NoticiasController::class,'details']);
+Route::get('/save', [NoticiasController::class,'saveData']);
